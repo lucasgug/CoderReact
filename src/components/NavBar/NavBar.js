@@ -14,9 +14,9 @@ export const NavBar = () => {
             <h1 className="titulo">Tienda Fútbol</h1>
             </Link>
             <nav className="header-nav">
-                <Link to="/productos/botines" className="header-link" > Botines</Link>
-                <Link to="/productos/camisetas" className="header-link" >Camisetas</Link>
-                <Link to="/productos/accesorios" className="header-link" >Accesorios</Link>
+                <Link to="/productos/botines" className="header-link" > Botines </Link>
+                <Link to="/productos/camisetas" className="header-link" >Camisetas </Link>
+                <Link to="/productos/accesorios" className="header-link" >Accesorios </Link>
                 <p><ShoppingCart /></p>
             </nav>
         </header>

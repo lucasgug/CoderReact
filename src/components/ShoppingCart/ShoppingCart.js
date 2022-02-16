@@ -1,8 +1,13 @@
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 import './ShoppingCart.scss'
 
 export const ShoppingCart =()=>{
+
+    const {cantidadCart} = useContext(CartContext)
 
     return(
 
@@ -10,10 +15,11 @@ export const ShoppingCart =()=>{
         <header className ="header">
         
 
-            <nav className="header-nav" >
+            <Link to="/cart" className="header-nav" >
                <ShoppingCartIcon className="icono" sx={{ fontSize: 40 }}/>
         
-           </nav>
+                <span >{cantidadCart()}</span>
+           </Link>
 
 
 

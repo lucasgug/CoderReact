@@ -6,12 +6,20 @@ import './styles/styles.scss'
 import {BrowserRouter,Routes,Route, Navigate} from 'react-router-dom'
 import {Camisetas} from './components/Camisetas'
 import {Accesorios} from './components/Accesorios'
-import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer"
+import {CartContext, CartProvider} from './context/CartContext'
+import { Cart } from "./components/Cart/Cart";
+
+
 
 
 function App() {
 
+
+
     return (
+
+    <CartProvider>
       <BrowserRouter>
           <NavBar/>
 
@@ -21,16 +29,17 @@ function App() {
               <Route path="/camisetas/:catId" element={  <Camisetas /> } />
               <Route path="/detail/:itemId" element={  <ItemDetailContainer /> } />
               <Route path="/accesorios/:catId" element={  <Accesorios/> } />
-              <Route path="*" element={  <Navigate to="/"  /> } />
+              <Route path="*" element={  <Navigate to="/" /> } />
+              <Route path="/cart" element={ <Cart/> }  />
             </Routes>
 
-         
-        
-
       </BrowserRouter>
-    );
-}
 
-export default App;
+   </CartProvider>
 
-        
+    )
+  }
+  
+  export default App;
+  
+  

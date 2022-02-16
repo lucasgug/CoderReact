@@ -5,7 +5,10 @@ import { pedirDatos } from "../../helpers/pedirDatos"
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 
+
 export const ItemDetailContainer =()=>{
+
+
 
     const[loading,setLoading] =useState(false)
     const[item,setItem] = useState(null)
