@@ -11,7 +11,8 @@ export const CartProvider = ({children}) =>{
     const [cart, setCart] = useState([])
 
     const  agregarAlCarrito =(item) =>{
-      setCart([...cart ,item])
+        
+        setCart([...cart ,item])
     
     }
     

@@ -7,7 +7,8 @@ export const stock = [
         precio: 14499,
         img: 'https://celadasa.vteximg.com.br/arquivos/ids/193737-1000-1000/FY6196-1.jpg?v=637674864070700000',
         stock: 10,
-        categoria:'botines'
+        categoria:'botines',
+        oferta : false
     },
     {
         nombre: 'Botines Nike Legend 9 Elite Fg',
@@ -16,7 +17,8 @@ export const stock = [
         precio: 41999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1181fd5d/products/NI_CZ8482-176/NI_CZ8482-176-1.JPG',
         stock: 20,
-        categoria:'botines'
+        categoria:'botines',
+        oferta:true
     },
     {
         nombre: 'Botines Nike Phantom Vision 2 Elite Dynamic Fit Fg',
@@ -25,7 +27,8 @@ export const stock = [
         precio: 49999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc5604c4a/products/NI_CD4161-906/NI_CD4161-906-1.JPG',
         stock: 8,
-        categoria:'botines'
+        categoria:'botines',
+        oferta:false
     },
     {
         nombre: 'Botines Nike Superfly 7 Academy Mds Fg Mg',
@@ -34,7 +37,8 @@ export const stock = [
         precio: 15999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4b544f71/products/NI_BQ5427-703/NI_BQ5427-703-1.JPG',
         stock: 7,
-        categoria:'botines'
+        categoria:'botines',
+        oferta:false
     },
     {
         nombre: 'Puma ultra 1.3 Mxsg',
@@ -43,7 +47,8 @@ export const stock = [
         precio: 26499,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6571eba8/products/PU_106513-01/PU_106513-01-1.JPG',
         stock: 23,
-        categoria:'botines'
+        categoria:'botines',
+        oferta:false
     },
     {
         nombre: 'Camiseta Puma Manchester City 2020/21',
@@ -52,7 +57,8 @@ export const stock = [
         precio: 6899,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw218dab59/products/PU_757058-01/PU_757058-01-1.JPG',
         stock: 12,
-        categoria:'camisetas'
+        categoria:'camisetas',
+        oferta:true
     },
     {
         nombre: 'Guantes Arquero Dribbling Royal 3.0',
@@ -61,7 +67,8 @@ export const stock = [
         precio: 6199,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw3008d4bf/products/DG_DFIAGU009ACB/DG_DFIAGU009ACB-1.JPG',
         stock: 11,
-        categoria:'accesorios'
+        categoria:'accesorios',
+        oferta:false
     },
     {
         nombre: 'Camiseta Nike Chelsea Fc 2021/22 Stadium Away',
@@ -70,7 +77,8 @@ export const stock = [
         precio: 9999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwae589c8d/products/NI_CV7888-732/NI_CV7888-732-1.JPG',
         stock: 14,
-        categoria:'camisetas'
+        categoria:'camisetas',
+        oferta:false
     },
     {
         nombre: 'Camiseta adidas Selección Argentina Alternativa 2021',
@@ -79,7 +87,8 @@ export const stock = [
         precio: 6999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw62bfdbd4/products/AD_FH8572/AD_FH8572-1.JPG',
         stock: 50,
-        categoria:'camisetas'
+        categoria:'camisetas',
+        oferta:true
     },
     {
         nombre: 'Camiseta Nike Liverpool Fc 2021/22 Stadium Home',
@@ -88,7 +97,8 @@ export const stock = [
         precio: 9999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwb23faaa4/products/NI_DB2560-688/NI_DB2560-688-1.JPG',
         stock: 8,
-        categoria:'camisetas'
+        categoria:'camisetas',
+        oferta:false
     },
     {
         nombre: 'Canilleras Umbro Neo Minimus Nc',
@@ -97,7 +107,8 @@ export const stock = [
         precio: 2449,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw844681d8/products/UB_21120U-KPJ/UB_21120U-KPJ-2.JPG',
         stock: 10,
-        categoria:'accesorios'
+        categoria:'accesorios',
+        oferta:false
     },
     {
         nombre: 'Medias adidas 21',
@@ -106,7 +117,8 @@ export const stock = [
         precio: 1999,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwad3e839c/products/AD_H18874/AD_H18874-1.JPG',
         stock: 12,
-        categoria:'accesorios'
+        categoria:'accesorios',
+        oferta:false
     },
     {
         nombre: 'Cinta Capitán Dribbling Basic',
@@ -115,7 +127,8 @@ export const stock = [
         precio: 599,
         img: 'https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw92495812/products/DG_DVAVVZ002Y/DG_DVAVVZ002Y-1.JPG',
         stock: 10,
-        categoria:'accesorios'
+        categoria:'accesorios',
+        oferta: true
     }
 
 ]

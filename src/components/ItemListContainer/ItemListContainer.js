@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { pedirDatos } from "../../helpers/pedirDatos"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router"
+import { db } from "../../firebase/config"
+import { collection ,getDocs , query ,where} from "firebase/firestore"
 
  
 export const ItemListContainer = () => {
@@ -9,36 +11,43 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(false)
 
-    const   {catId} = useParams()
+    console.log(productos)
+
+    const {catId} = useParams()
 
    
    
 
     useEffect( () => {
         setLoading(true)
+        //db lo exporto desde config.js
+        
+        //1ro armo referencia
+        const productosRef = collection( db,'productos' )
+        const q = catId ? query(productosRef, where("categoria","==",catId)) : productosRef
+        //2do pedir ref
+       getDocs(q) 
+            .then((resp) => {
+           setProductos(resp.docs.map((doc) => {
+               return{
 
-        pedirDatos()
-            .then((res) => {
-                if(catId){
-                
-                    setProductos( res.filter((el)=> el.categoria === catId      ) )
-                }else{
-                    setProductos(res)
-                }
+                   id : doc.id,
+                   ...doc.data()
 
-                
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-            .finally(() => {
-               setLoading(false)
-            })
+               }
+           })) 
+        })
+        .finally(() => {
+            setLoading(false)
+        })
 
     }, [catId])
 
     return (
         <>
+           <h2 className="container ">{catId}</h2>
+            <hr/>
+
             {
                 loading 
                     ? <h2>Loading...</h2> 
@@ -47,3 +56,32 @@ export const ItemListContainer = () => {
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
+pedirDatos()
+.then((res) => {
+    if(catId){
+    
+        setProductos( res.filter((el)=> el.categoria === catId      ) )
+    }else{
+        setProductos(res)
+    }
+
+})
+.catch((err) => {
+    console.log(err)
+})
+.finally(() => {
+   setLoading(false)
+})
+*/

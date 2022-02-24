@@ -7,7 +7,7 @@ import './ShoppingCart.scss'
 
 export const ShoppingCart =()=>{
 
-    const {cantidadCart} = useContext(CartContext)
+    const {cantidadCart , cart} = useContext(CartContext)
 
     return(
 
@@ -15,12 +15,12 @@ export const ShoppingCart =()=>{
         <header className ="header">
         
 
-            <Link to="/cart" className="header-nav" >
+            <Link to="/cart" className={cart.length === 0 ? 'cart-widget cart-hidden' : 'cart-widget'} >
                <ShoppingCartIcon className="icono" sx={{ fontSize: 40 }}/>
         
-                <span >{cantidadCart()}</span>
+                <span>{cantidadCart()}</span>
            </Link>
-
+ 
 
 
        </header>
@@ -29,3 +29,5 @@ export const ShoppingCart =()=>{
     )
 
 }
+
+//header-nav"

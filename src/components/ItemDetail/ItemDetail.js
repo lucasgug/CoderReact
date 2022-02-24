@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 
-export const ItemDetail =  ({id,nombre,img,precio,desc,stock,categoria})=>{
+export const ItemDetail =  ({id,nombre,img,precio,desc,stock,categoria, oferta})=>{
 
    
     const[cantidad , setCantidad] = useState(0)
@@ -34,6 +34,7 @@ export const ItemDetail =  ({id,nombre,img,precio,desc,stock,categoria})=>{
             <img src={img} alt={nombre}  />
             <p>{desc}</p>
             <h5>Precio: ${precio}</h5>
+            
 
             {
                 isInCart(id)
@@ -46,7 +47,9 @@ export const ItemDetail =  ({id,nombre,img,precio,desc,stock,categoria})=>{
 
             <>
             <ItemCount max={stock}  counter={cantidad} setCounter={setCantidad} />
-            <button className="btn btn-success my-2" onClick={handleAgregar} >Agregar al carrito</button>
+            <button className="btn btn-success my-2"
+            disabled ={ cantidad === 0}
+             onClick ={handleAgregar} >Agregar al carrito</button>
            </>
             }
 
