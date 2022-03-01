@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../helpers/pedirDatos"
 import { ItemList } from "../ItemList/ItemList"
 import { useParams } from "react-router"
 import { db } from "../../firebase/config"
@@ -66,22 +65,3 @@ export const ItemListContainer = () => {
 
 
 
-
-/*
-pedirDatos()
-.then((res) => {
-    if(catId){
-    
-        setProductos( res.filter((el)=> el.categoria === catId      ) )
-    }else{
-        setProductos(res)
-    }
-
-})
-.catch((err) => {
-    console.log(err)
-})
-.finally(() => {
-   setLoading(false)
-})
-*/

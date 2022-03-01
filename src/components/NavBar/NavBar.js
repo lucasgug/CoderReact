@@ -1,9 +1,8 @@
 
-import { blue } from '@mui/material/colors'
+
 import {ShoppingCart} from '../ShoppingCart/ShoppingCart'
 import { Link } from 'react-router-dom'
-import { color } from '@mui/system'
-import { text } from 'dom-helpers'
+
 
 export const NavBar = () => {
 
